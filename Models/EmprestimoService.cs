@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Biblioteca.Models
 {
-    public class EmprestimoService 
+    public class EmprestimoService
     {
         public void Inserir(Emprestimo e)
         {
-            using(BibliotecaContext bc = new BibliotecaContext())
+            using (BibliotecaContext bc = new BibliotecaContext())
             {
                 bc.Emprestimos.Add(e);
                 bc.SaveChanges();
@@ -17,7 +17,7 @@ namespace Biblioteca.Models
 
         public void Atualizar(Emprestimo e)
         {
-            using(BibliotecaContext bc = new BibliotecaContext())
+            using (BibliotecaContext bc = new BibliotecaContext())
             {
                 Emprestimo emprestimo = bc.Emprestimos.Find(e.Id);
                 emprestimo.NomeUsuario = e.NomeUsuario;
@@ -32,15 +32,36 @@ namespace Biblioteca.Models
 
         public ICollection<Emprestimo> ListarTodos(FiltrosEmprestimos filtro)
         {
-            using(BibliotecaContext bc = new BibliotecaContext())
+            using (BibliotecaContext bc = new BibliotecaContext())
             {
-                return bc.Emprestimos.Include(e => e.Livro).ToList();
+                IQueryable<Emprestimo> query;
+                if (filtro != null)
+                    switch (filtro.TipoFiltro)
+                    {
+                        case "Usuario":
+                            query = bc.Emprestimos.Where(e => e.NomeUsuario.Contains(filtro.Filtro));
+                            break;
+                        case "Livro":
+                            query = bc.Emprestimos.Where(e => e.Livro.Titulo.Contains(filtro.Filtro));
+                            break;
+                        default:
+                            query = bc.Emprestimos;
+                            break;
+                    }
+                else
+                {
+                    // caso filtro não tenha sido informado
+                    query = bc.Emprestimos;
+                }
+                //ordenação por data de devolução
+                return query.OrderBy(e => e.DataDevolucao).Include(e => e.Livro).ToList();
+                //obs -- o include faz com que seja retornada uma classe de dentro da tabela (uma entidade dentro de uma entidade);
             }
         }
 
         public Emprestimo ObterPorId(int id)
         {
-            using(BibliotecaContext bc = new BibliotecaContext())
+            using (BibliotecaContext bc = new BibliotecaContext())
             {
                 return bc.Emprestimos.Find(id);
             }
