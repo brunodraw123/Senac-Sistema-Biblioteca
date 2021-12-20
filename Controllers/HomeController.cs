@@ -21,7 +21,7 @@ namespace Biblioteca.Controllers
 
         public IActionResult Index()
         {
-            Autenticacao.CheckLogin(this);
+            Autenticacao.CheckLogin(this);//verifica se existe alguem logado (this é o probrio controller/ dados desse metodo/pagina sendo enviados para o metodo invocado)
             return View();
         }
 
@@ -33,15 +33,15 @@ namespace Biblioteca.Controllers
         [HttpPost]
         public IActionResult Login(string login, string senha)
         {
-            if(login != "admin" || senha != "123")
+            //if(login != "admin" || senha != "123") inaceitavel senha e login dentro do proprio codigo;
+            if (Autenticacao.verificaLoginSenha(login, senha, this))
             {
-                ViewData["Erro"] = "Senha inválida";
-                return View();
+                return View("Index");
             }
             else
             {
-                HttpContext.Session.SetString("user", "admin");
-                return RedirectToAction("Index");
+                ViewData["Erro"] = "Senha inválida";
+                return View();
             }
         }
 

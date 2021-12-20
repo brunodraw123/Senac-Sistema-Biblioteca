@@ -14407,6 +14407,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Usuario\\ListaDeUsuarios.cshtml",
+      "TargetPath": "Views\\Usuario\\ListaDeUsuarios.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Usuario\\ExcluirUsuario.cshtml",
+      "TargetPath": "Views\\Usuario\\ExcluirUsuario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Shared\\_CookieConsentPartial.cshtml",
       "TargetPath": "Views\\Shared\\_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
@@ -14437,6 +14447,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Usuario\\EditarUsuario.cshtml",
+      "TargetPath": "Views\\Usuario\\EditarUsuario.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -14444,6 +14459,11 @@
     {
       "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Emprestimo\\Cadastro.cshtml",
       "TargetPath": "Views\\Emprestimo\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Usuario\\NeedAdmin.cshtml",
+      "TargetPath": "Views\\Usuario\\NeedAdmin.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14459,6 +14479,11 @@
     {
       "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Livro\\Cadastro.cshtml",
       "TargetPath": "Views\\Livro\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Tatiane\\Downloads\\Biblioteca\\Views\\Usuario\\RegistrarUsuario.cshtml",
+      "TargetPath": "Views\\Usuario\\RegistrarUsuario.cshtml",
       "FileKind": "mvc"
     },
     {

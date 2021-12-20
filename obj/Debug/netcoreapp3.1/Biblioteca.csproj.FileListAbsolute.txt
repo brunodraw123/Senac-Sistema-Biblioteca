@@ -52,3 +52,8 @@ C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.csproj.
 C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.genruntimeconfig.cache
+C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\EditarUsuario.cshtml.g.cs
+C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ExcluirUsuario.cshtml.g.cs
+C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\ListaDeUsuarios.cshtml.g.cs
+C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\NeedAdmin.cshtml.g.cs
+C:\Users\Tatiane\Downloads\Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\RegistrarUsuario.cshtml.g.cs

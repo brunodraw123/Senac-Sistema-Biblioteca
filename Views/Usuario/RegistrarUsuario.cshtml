@@ -1,0 +1,14 @@
+@model Usuario
+
+<h1>Registre-se aqui</h1>
+
+<form action="RegistrarUsuario" method="post"> 
+    <input type="text" name="Nome" id="userNome" placeholder="Nome">
+    <input type="text" name="Login" id="userLogin" placeholder="Login">
+    <input type="text" name="Senha" id="userSenha" placeholder="Senha">
+    <select name="tipo" id="userTipo">
+        <option value="@Usuario.admin">Administrador</option>
+        <option value="@Usuario.padrao">Padrão</option>
+    </select>
+    <input type="submit" value="REGISTRAR">
+</form>
